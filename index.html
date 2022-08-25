@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+<img class="logo" src="./images/logo.svg">
+<div class="wrapper">
+  <div class="inputs">
+    <div class="sectiontitle">Bill</div>
+    <input class="billinput" type="number" placeholder="000.00">
+    <div class="sectiontitle">Select Tip %</div>
+    <div class="tips">
+      <button class="tip">5%</button>
+      <button class="tip">10%</button>
+      <button class="tip">15%</button>
+      <button class="tip">25%</button>
+      <button class="tip">50%</button>
+      <input type="number" placeholder="Custom">
+    </div>
+    <div class="sectiontitle">Number of People</div>
+    <input type="number" class="number-of-people" placeholder="1">
+  </div>
+  <div class="results">
+    <div class="resulttext">Tip Amount<br><span>/ person</span></div>
+    <div class="tipresult">0.00</div>
+    <div class="resulttext">Total<br><span>/ person</span></div>
+    <div class="totalresult">0.00</div>
+    <button class="reset">Reset</button>
+  </div>
+</div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/JohnyTheTurtle?tab=repositories">JohnyTheTurtle</a>.
+  </div>
+</body>
+</html>

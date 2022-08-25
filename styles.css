@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root{
+    /* ## Colors
+### Primary */
+--Strong-cyan: hsl(172, 67%, 45%);
+/* ### Neutral */
+--Very-dark-cyan: hsl(183, 100%, 15%);
+--Dark-grayish-cyan: hsl(186, 14%, 43%);
+--Grayish-cyan: hsl(184, 14%, 56%);
+--Light-grayish-cyan: hsl(185, 41%, 84%);
+--Very-light-grayish-cyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: auto;
+    background-color: var(--Light-grayish-cyan);
+    font-family: "Space Mono";
+    font-size: 24px;
+    font-weight: 700;
+    width: 375px;
+}
+.wrapper {
+    background-color: var(--Very-light-grayish-cyan);
+    border-radius: 20px;
+    margin-top: 5rem;
+    padding: 1.5rem;
+    color:var(--Dark-grayish-cyan);
+}
+.logo{
+    position: relative;
+    top: 3rem;
+    right: -35%;
+}
+button{
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+input {
+    background-color: hsl(180, 29%, 92%);
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: var(--Very-dark-cyan);
+}
+
+.sectiontitle{
+    font-size: 16px;
+    padding: 0 0 0.5rem 0 
+}
+.billinput{
+    margin-bottom: 2rem;
+    background: url("./images/icon-dollar.svg") no-repeat 5% 50%, hsl(180, 29%, 92%);
+}
+.tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.tips button:hover{
+    cursor: pointer;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+input:hover{
+    cursor: pointer;
+    box-shadow: 0 0 3px 2px var(--Strong-cyan);
+}
+.tips input {
+    width: 100%;
+}
+.tips button{
+    background-color: var(--Very-dark-cyan);
+    border: none;
+    border-radius: 5px;
+    color: var(--White);
+}
+.number-of-people{
+    background: url("./images/icon-person.svg") no-repeat 5% 50%, hsl(180, 29%, 92%);
+    margin-bottom: 2rem;
+}
+.results {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 15px;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 2rem;
+}
+.resulttext{
+    color:var(--White);
+    font-size: 16px;
+}
+.resulttext span{
+    color: var(--Grayish-cyan);
+    font-size: 14px;
+}
+.totalresult, .tipresult  {
+    text-align: right;
+    color: var(--Strong-cyan);
+    font-size: 32px;
+    overflow: hidden;
+    word-wrap: break-word;
+    line-height: 1;
+    
+}
+.totalresult::before, .tipresult::before  {
+    content:"$";
+}
+.reset {
+    grid-column: 1/3;
+    width: 100%;
+    background-color: var(--Strong-cyan);
+    border-radius: 5px;
+    border: none;
+    color: var(--Very-dark-cyan);
+    text-transform: uppercase;
+    align-self: end;
+    padding: 0.5rem;
+}
+.reset:hover{
+    filter: brightness(135%);
+    cursor: pointer;
+}
+.shake {
+    animation: shake 0.5s;
+    animation-iteration-count: 2;
+  }  
+@keyframes shake {
+    0%{
+        transform: translateX(4px) rotate(0deg);
+    }
+    25%{
+        transform: translateX(-4px) rotate(-5deg);
+    }
+    50%{
+        transform: translateX(4px) rotate(5deg);
+    }
+    75%{
+        transform: translateX(-4px) rotate(0deg);
+    }
+    100%{
+        transform: translateX(4px) rotate(5deg);
+    }
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    padding-top: 5rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 900px) {
+    body{
+        width: auto;
+        max-width: 1440px;
+    }
+    .logo{
+        right: -45%;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        margin: 5rem 2rem 0 2rem;
+    }
+    .inputs {
+        width:50%;
+        margin: 0 3rem 0 0;
+    }
+    .results {
+        width:50%;
+    }
+
+}
